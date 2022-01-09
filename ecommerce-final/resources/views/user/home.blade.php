@@ -56,7 +56,7 @@
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="/"
+                                <a class="nav-link" href="{{url('/')}}"
                                     >Home
                                     <span class="sr-only">(current)</span>
                                 </a>
@@ -67,12 +67,12 @@
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"
+                                <a class="nav-link" href="{{url('cds')}}"
                                     >Our CDs</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html"
+                                <a class="nav-link" href="{{url('games')}}"
                                     >Our Games</a
                                 >
                             </li>
@@ -139,8 +139,8 @@
                             <p>
                                 <a
                                     rel="nofollow"
-                                    href="https://templatemo.com/tm-546-sixteen-clothing"
-                                    target="_parent"
+                                    href="/"
+                                    
                                     >The Cozy Store</a
                                 >
                                 offers different kinds of books , CDs related to documentary, movies and many more and games for entertainment. Lets grab the opportunity. 

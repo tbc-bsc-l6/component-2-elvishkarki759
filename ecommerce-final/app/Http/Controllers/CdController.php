@@ -1,17 +1,39 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\cds;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\cds;
+use App\Models\cd;
+
+
 
 class CdController extends Controller
 {
     //for cds 
-    public function cds(){
-        return view('admin.cds');
+    public function cds()
+    {
+        $usertype=Auth::user()->usertype;
+
+        if($usertype=='1')
+        {
+            return view('admin.cds');
+        }
+        else{
+            $data=cds::paginate(6);
+            return view('user.cds',compact('data'));
+        }
     }
 
+    public function cd(){
+        if(Auth::id()){
+            return $this->cds('/cds');
+        }
+        else{
+            $data=cds::paginate(6);
+            return view('user.cds',compact('data'));
+        }
+    }
 
     public function uploadcds(Request $request){
         $data = new cds;
@@ -26,6 +48,24 @@ class CdController extends Controller
         $data->save();
 
         return redirect()->back()->with('alert', 'CD Added Successfully!');
+
+    }
+
+    public function showcds(){
+        $data=cds::all();
+        return view('admin.showcds',compact('data'));
+    }
+
+    public function deletecds($id){
+        $data=cds::find($id);
+        $data->delete();
+        return redirect()->back()->with('alert', 'CD Deleted Successfully!');
+
+    }
+
+    public function updatecds($id){
+        $data=cds::find($id);
+        return updatecds('admin.updatecds',compact('data'));
 
     }
 

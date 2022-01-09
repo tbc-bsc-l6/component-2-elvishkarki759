@@ -11,6 +11,7 @@ use App\Models\games;
 
 class HomeController extends Controller
 {
+    //login
     public function redirect()
     {
         $usertype=Auth::user()->usertype;
@@ -29,7 +30,7 @@ class HomeController extends Controller
 
 
         if(Auth::id()){
-            return redirect('/redirect');
+            return redirect('redirect');
         }
         else{
             $data=books::paginate(6);

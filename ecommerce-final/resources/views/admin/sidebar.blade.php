@@ -20,33 +20,64 @@
             </a>
           </li>
           
-          <!-- books  -->
+          <!--Add books  -->
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('books')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">Books</span>
+              <span class="menu-title">Add Books</span>
             </a>
           </li>
 
-          <!-- CDs -->
+          <!--Add CDs -->
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('cds')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">cds</span>
+              <span class="menu-title">Add cds</span>
             </a>
           </li>
 
-          <!-- Games -->
+          <!--Add Games -->
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('games')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">games</span>
+              <span class="menu-title">Add games</span>
+            </a>
+          </li>
+
+          <!-- Show Books -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('showbooks')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Show All Books</span>
+            </a>
+          </li>
+
+          <!-- Show cds -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('showcds')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Show All Cds</span>
+            </a>
+          </li>
+
+
+          <!-- Show Games  -->
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('showgames')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Show All Games</span>
             </a>
           </li>
 

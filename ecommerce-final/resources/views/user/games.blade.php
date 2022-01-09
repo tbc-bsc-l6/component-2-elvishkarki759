@@ -87,7 +87,7 @@
           <div class="col-md-12">
             <div class="text-content">
               <h4>new arrivals</h4>
-              <h2>The Best Selling Books</h2>
+              <h2>The Best Selling Games</h2>
             </div>
           </div>
         </div>
@@ -109,19 +109,19 @@
                     </div>
 
 
-                    @foreach($data as $books)
+                    @foreach($data as $games)
 
 
                     <div class="col-md-4">
                         <div class="product-item">
                             <a href="#"
-                                ><img src="assets/images/book.jpg" alt=""
+                                ><img src="assets/images/games4.jpg" alt=""
                             /></a>
                             <div class="down-content">
-                                <a href="#"><h4>{{$books->title}}</h4></a>
-                                <h6>${{$books->price}}</h6>
+                                <a href="#"><h4>{{$games->title}}</h4></a>
+                                <h6>${{$games->price}}</h6>
                                 <p>
-                                    {{$books->description}}
+                                    {{$games->description}}
                                 </p>
                                 
                             </div>

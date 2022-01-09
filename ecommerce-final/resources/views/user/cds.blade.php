@@ -38,14 +38,14 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2>The <em>Cozy Store</em></h2></a>
+          <a class="navbar-brand" href="/"><h2>The <em>Cozy Store</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}">Home
+                <a class="nav-link" href="/">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
@@ -109,19 +109,19 @@
                     </div>
 
 
-                    @foreach($data as $books)
+                    @foreach($data as $cds)
 
 
                     <div class="col-md-4">
                         <div class="product-item">
                             <a href="#"
-                                ><img src="assets/images/book.jpg" alt=""
+                                ><img src="assets/images/cd3.jpg" alt=""
                             /></a>
                             <div class="down-content">
-                                <a href="#"><h4>{{$books->title}}</h4></a>
-                                <h6>${{$books->price}}</h6>
+                                <a href="#"><h4>{{$cds->title}}</h4></a>
+                                <h6>${{$cds->price}}</h6>
                                 <p>
-                                    {{$books->description}}
+                                    {{$cds->description}}
                                 </p>
                                 
                             </div>
