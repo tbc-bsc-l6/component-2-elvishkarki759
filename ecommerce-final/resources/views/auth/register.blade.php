@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <!-- <x-jet-authentication-card-logo /> -->
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -58,3 +58,20 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+<div>
+    <ul style="position:relative;top:-100px; text-align: center;">
+        <li>
+            Enter the Name you want to display in the Name field.
+        </li>
+        <li>
+            Enter the proper email address. Proper email address contains alphabets,numbers and @. for example: abc@gmail.com or abc12@gmail.com
+        </li>
+        <li>
+            Enter a strong password. Password must include capital letter, small letter, number and special characters.
+        </li>
+        <li style="color:red">
+            Now You are ready to go.
+        </li>
+    </ul>
+</div>
+

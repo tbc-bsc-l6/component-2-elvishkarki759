@@ -18,3 +18,39 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+
+    <style>
+          .title{
+            color:white;padding-top:40px;font-size:25px; 
+        }
+
+        .lbel{
+            display: inline-block;width:200px;
+            text-align: left;
+        }
+        .ipt{
+            color:black; width:50%;
+        }
+        .pdg{
+            padding:15px;
+        }
+        .prg{
+            color:white; padding:10px;position:relative;right: 376px;top:-38px;font-size:17px;
+        }
+
+        .lbl{
+            position:relative;
+            right: 100px;
+        }
+        .lbll{
+            position:relative;
+            right: 140px;  
+        }
+
+        .prgg{
+            position:relative;
+            right: 35px;  
+        }
+
+
+    </style>

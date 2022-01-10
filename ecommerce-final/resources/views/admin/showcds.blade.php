@@ -45,6 +45,7 @@
 
               @endforeach
           </table>
+</div>
     <!-- plugins:js -->
     @include('admin.script');
  <script>

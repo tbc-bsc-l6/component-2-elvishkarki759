@@ -65,7 +65,35 @@ class GameController extends Controller
 
     public function updategames($id){
         $data=games::find($id);
-        return updategames('admin.updategames',compact('data'));
+        return view('admin.updategames',compact('data'));
+
+    }
+
+    public function updategame(Request $request, $id){
+        $data = games::find($id);
+        $image = $request->file;
+        if($image){   
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->file->move('gameimage',$imagename);
+        $data->image=$imagename;
+        }
+        $data->title=$request->title;
+        $data->price=$request->price;
+        $data->description=$request->des;
+        $data->quantity=$request->quantity;
+        $data->save();
+
+        return redirect()->back()->with('alert', 'Book Updated Successfully!');
+    }
+
+    public function search(Request $request){
+        $search=$request->search;
+        if($search==''){
+            $data=games::paginate(6);
+            return view('user.games',compact('data'));
+        }
+        $data = games::where('title','Like','%'.$search.'%')->get();
+        return view('user.home',compact('data'));
 
     }
 

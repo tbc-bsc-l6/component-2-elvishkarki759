@@ -64,7 +64,36 @@ class BookController extends Controller
 
     public function updatebooks($id){
         $data=books::find($id);
-        return updatebooks('admin.updatebooks',compact('data'));
+        return view('admin.updatebooks',compact('data'));
+
+    }
+
+    public function updatebook(Request $request, $id){
+        $data = books::find($id);
+        $image = $request->file;
+        if($image){   
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->file->move('bookimage',$imagename);
+        $data->image=$imagename;
+        }
+        $data->title=$request->title;
+        $data->price=$request->price;
+        $data->description=$request->des;
+        $data->quantity=$request->quantity;
+        $data->save();
+
+        return redirect()->back()->with('alert', 'Book Updated Successfully!');
+    }
+
+    public function search(Request $request){
+        $search=$request->search;
+        if($search==''){
+            $data=books::paginate(6);
+            return view('user.books',compact('data'));
+        }
+
+        $data = books::where('title','Like','%'.$search.'%')->get();
+        return view('user.home',compact('data'));
 
     }
 

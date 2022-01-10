@@ -65,7 +65,36 @@ class CdController extends Controller
 
     public function updatecds($id){
         $data=cds::find($id);
-        return updatecds('admin.updatecds',compact('data'));
+        return view('admin.updatecds',compact('data'));
+
+    }
+
+    public function updatecd(Request $request, $id){
+        $data = cds::find($id);
+        $image = $request->file;
+        if($image){   
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->file->move('cdimage',$imagename);
+        $data->image=$imagename;
+        }
+        $data->title=$request->title;
+        $data->price=$request->price;
+        $data->description=$request->des;
+        $data->quantity=$request->quantity;
+        $data->save();
+
+        return redirect()->back()->with('alert', 'CD Updated Successfully!');
+    }
+
+    public function search(Request $request){
+        $search=$request->search;
+        if($search==''){
+            $data=cds::paginate(6);
+            return view('user.cds',compact('data'));
+        }
+
+        $data = cds::where('title','Like','%'.$search.'%')->get();
+        return view('user.home',compact('data'));
 
     }
 

@@ -3,61 +3,54 @@
   <head>
     @include('admin.css');
 
-    <style type="text/css">
-        .title{
-            color:white;padding-top:25px;font-size:25px; 
-        }
-
-        label{
-            display: inline-block;width:200px;
-        }
-
-        
-        
-
-    </style>
   </head>
   <body>
  @include('admin.sidebar');
       <!-- partial -->
       @include('admin.navbar');
        
-      <div class="container-fluid page-body-wrapper">
+
+
+          <div class="container-fluid page-body-wrapper">
           <div class="container" align="center">
 
 <h1 class="title">Add Games</h1>
+
+
 <form action="{{url('uploadgames')}}" method="post" enctype="multipart/form-data">
-    @csrf
-<div style="padding:15px;">
-    <label>Book Title</label>
-    <input style="color:black;" type="text" name="title" placeholder="Product title here..." required="">
+        @csrf
+
+<div class="pdg">
+    <label class="lbel">Game Title</label>
+    <input class="ipt" type="text" name="title" placeholder="Product title here..." required="">
 </div>
 
-<div style="padding:15px;">
-    <label>Price</label>
-    <input style="color:black;" type="number" name="price" placeholder="Price here..." required="">
+<div class="pdg">
+    <label class="lbel">Price</label>
+    <input class="ipt" type="number" name="price" placeholder="Price here..." required="">
 </div>
 
-<div style="padding:15px;">
-    <label>Description</label>
-    <input style="color:black;" type="text" name="des" placeholder="Description here..." required="">
+<div class="pdg">
+    <label class="lbel">Description</label>
+    <input class="ipt" type="text" name="des" placeholder="Description here..." required="">
 </div>
 
-<div style="padding:15px;">
-    <label>Quantity</label>
-    <input style="color:black;" type="text" name="quantity" placeholder="Product quantity..." required="">
+<div class="pdg">
+    <label class="lbel">Quantity</label>
+    <input class="ipt" type="text" name="quantity" placeholder="Product quantity..." required="">
 </div>
 
-<div style="padding:15px;">
-    <input type="file" name="file">
+<div class="pdg">
+    <input class="prgg" type="file" name="file">
 </div>
 
-<div style="padding:15px;">
+<div class="pdg">
     <input class="btn btn-success" type="submit">
 </div>
 </form>
 
           </div>
+    </div>
     <!-- plugins:js -->
     @include('admin.script');
     <script>

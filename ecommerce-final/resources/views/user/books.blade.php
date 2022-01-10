@@ -105,6 +105,11 @@
                                 >view all products
                                 <i class="fa fa-angle-right"></i
                             ></a>
+                            <form action="{{url('search')}}" method="get" class="form-inline" style="float:right;padding:10px;">
+                            @csrf
+                              <input class="form-control" type="search" name="search" placeholder="search">
+                              <input type="submit" value="search" class="btn btn-danger">
+                            </form>
                         </div>
                     </div>
 
@@ -115,7 +120,7 @@
                     <div class="col-md-4">
                         <div class="product-item">
                             <a href="#"
-                                ><img src="assets/images/book.jpg" alt=""
+                                ><img src="/bookimage/{{$books->image}}" alt=""
                             /></a>
                             <div class="down-content">
                                 <a href="#"><h4>{{$books->title}}</h4></a>
@@ -123,6 +128,8 @@
                                 <p>
                                     {{$books->description}}
                                 </p>
+                                <a class="btn btn-danger" href="">Add To Cart</a>
+
                                 
                             </div>
                         </div>
@@ -130,10 +137,12 @@
                     @endforeach
 
 
+                    @if(method_exists($data,'links'))
                     <div class="d-flex justify-content-center">
                         {!!$data->links()!!}
 
                     </div>
+                    @endif 
 
 
                 </div>

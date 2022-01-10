@@ -28,12 +28,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 route::get('/redirect',[HomeController::class,'redirect']);
 
 route::get('/',[HomeController::class,'index']);
+route::get('/search',[HomeController::class,'search']);
+
 
 route::get('/books',[BookController::class,'books']);
 route::get('/books',[BookController::class,'book']);
 route::get('/showbooks',[BookController::class,'showbooks']);
 route::get('/deletebooks/{id}',[BookController::class,'deletebooks']);
 route::get('/updatebooks/{id}',[BookController::class,'updatebooks']);
+route::post('/updatebook/{id}',[BookController::class,'updatebook']);
+route::get('/search',[BookController::class,'search']);
+
+
 
 
 
@@ -44,6 +50,10 @@ route::get('/cds',[CdController::class,'cd']);
 route::get('/showcds',[CdController::class,'showcds']);
 route::get('/deletecds/{id}',[CdController::class,'deletecds']);
 route::get('/updatecds/{id}',[CdController::class,'updatecds']);
+route::post('/updatecd/{id}',[CdController::class,'updatecd']);
+route::get('/search',[CdController::class,'search']);
+
+
 
 
 
@@ -54,6 +64,10 @@ route::get('/games',[GameController::class,'game']);
 route::get('/showgames',[GameController::class,'showgames']);
 route::get('/deletegames/{id}',[GameController::class,'deletegames']);
 route::get('/updategames/{id}',[GameController::class,'updategames']);
+route::post('/updategame/{id}',[GameController::class,'updategame']);
+route::get('/search',[GameController::class,'search']);
+
+
 
 
 

@@ -38,5 +38,13 @@ class HomeController extends Controller
 
         }
     }
+
+    public function search(Request $request){
+        $search=$request->search;
+
+        $data = books::where('title','Like','%'.$search.'%')->get();
+        return view('user.home',compact('data'));
+
+    }
     
 }
