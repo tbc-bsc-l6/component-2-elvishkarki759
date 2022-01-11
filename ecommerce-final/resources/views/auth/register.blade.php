@@ -2,6 +2,8 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <!-- <x-jet-authentication-card-logo /> -->
+        <h2 style="font-size:30px;">The <em style="font-style: normal;color:red;">Cozy Store</em></h2>
+
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -51,15 +53,13 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4" style="background-color:red;">
                     {{ __('Register') }}
                 </x-jet-button>
             </div>
         </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
-<div>
-    <ul style="position:relative;top:-100px; text-align: center;">
+        <div>
+    <ul style="position:relative;top:-50px; text-align: left; padding-top:130px">
         <li>
             Enter the Name you want to display in the Name field.
         </li>
@@ -74,4 +74,8 @@
         </li>
     </ul>
 </div>
+    </x-jet-authentication-card>
+
+</x-guest-layout>
+
 

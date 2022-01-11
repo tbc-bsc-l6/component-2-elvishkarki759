@@ -49,13 +49,13 @@
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="{{url('books')}}">Our Books</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{url('cds')}}">Our CDs</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="{{url('games')}}">Our Games</a>
               </li>
 

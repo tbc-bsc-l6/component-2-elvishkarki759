@@ -7,7 +7,6 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CdController;
 use App\Http\Controllers\GameController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +19,12 @@ use App\Http\Controllers\GameController;
 */
 
 
+ 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [HomeController::class, 'redirect'])->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-route::get('/redirect',[HomeController::class,'redirect']);
+route::middleware(['auth'])->get('/redirect', function(){
+    return redirect('/dashboard');
+});
 
 route::get('/',[HomeController::class,'index']);
 route::get('/search',[HomeController::class,'search']);
@@ -33,10 +32,10 @@ route::get('/search',[HomeController::class,'search']);
 
 route::get('/books',[BookController::class,'books']);
 route::get('/books',[BookController::class,'book']);
-route::get('/showbooks',[BookController::class,'showbooks']);
-route::get('/deletebooks/{id}',[BookController::class,'deletebooks']);
-route::get('/updatebooks/{id}',[BookController::class,'updatebooks']);
-route::post('/updatebook/{id}',[BookController::class,'updatebook']);
+route::middleware(['auth'])->get('/showbooks',[BookController::class,'showbooks']);
+route::middleware(['auth'])->get('/deletebooks/{id}',[BookController::class,'deletebooks']);
+route::middleware(['auth'])->get('/updatebooks/{id}',[BookController::class,'updatebooks']);
+route::middleware(['auth'])->get('/updatebook/{id}',[BookController::class,'updatebook']);
 route::get('/search',[BookController::class,'search']);
 
 

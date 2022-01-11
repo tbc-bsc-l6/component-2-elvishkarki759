@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         if($usertype=='1')
         {
-            return view('admin.home');
+            return redirect('/showbooks');
         }
         else{
             $data=books::paginate(6);

@@ -2,6 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <!-- <x-jet-authentication-card-logo /> -->
+            <h2 style="font-size:30px;">The <em style="font-style: normal;color:red;">Cozy Store</em></h2>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -39,7 +40,7 @@
                     </a>
                 @endif
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4" style="background-color:red">
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>

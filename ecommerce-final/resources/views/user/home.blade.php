@@ -83,7 +83,7 @@
                             <x-app-layout>
                             </x-app-layout>
                             @else
-                            <li><a  class="nav-link" href="{{ route('login') }}" >Log in</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}" >Log in</a></li>
 
                             @if (Route::has('register'))
                             <li><a class="nav-link"  href="{{ route('register') }}" >Register</a></li>
