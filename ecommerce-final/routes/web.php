@@ -36,6 +36,7 @@ route::middleware(['auth'])->get('/showbooks',[BookController::class,'showbooks'
 route::middleware(['auth'])->get('/deletebooks/{id}',[BookController::class,'deletebooks']);
 route::middleware(['auth'])->get('/updatebooks/{id}',[BookController::class,'updatebooks']);
 route::middleware(['auth'])->get('/updatebook/{id}',[BookController::class,'updatebook']);
+route::post('/updatebook/{id}',[BookController::class,'updatebook']);
 route::get('/search',[BookController::class,'search']);
 
 
