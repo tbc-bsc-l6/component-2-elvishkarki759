@@ -46,5 +46,11 @@ class HomeController extends Controller
         return view('user.home',compact('data'));
 
     }
+
+    // public function subscribe(Request $request){
+    //     $request->validate([
+    //         'emailaddress'=>'required|email'
+    //     ]);
+    // }
     
 }

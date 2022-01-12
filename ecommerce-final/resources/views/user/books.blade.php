@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>The Cozy Store</title>
 
@@ -148,22 +150,15 @@
                 </div>
             </div>
         </div>
+        <!-- NewsLetter -->
+        @include('user.newsletter');
 
-    
-    <footer>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="inner-content">
-                      <p>
-                          Copyright &copy; 2020 The Cozy Store Co., Ltd.
-                          - Design: elvish
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <!-- footer -->
+        @include('user.footer');
+
+
+        @include('user.scroll');
+
 
 
     <!-- Bootstrap core JavaScript -->

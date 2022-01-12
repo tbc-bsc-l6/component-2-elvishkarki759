@@ -125,6 +125,10 @@
 
         @include('user.products');
 
+
+
+
+
         <div class="best-features">
             <div class="container">
                 <div class="row">
@@ -168,7 +172,7 @@
                                     <a href="#">Best Deals and many more</a>
                                 </li>
                             </ul>
-                            <a href="about.html" class="filled-button"
+                            <a href="#" class="filled-button"
                                 >Read More</a
                             >
                         </div>
@@ -181,6 +185,16 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- NewsLetter -->
+        @include('user.newsletter');
+
+
+
+
+
+
 
         <div class="call-to-action">
             <div class="container">
@@ -209,20 +223,9 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="inner-content">
-                            <p>
-                                Copyright &copy; 2020 The Cozy Store Co., Ltd.
-                                - Design: elvish
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('user.footer');
+
+        @include('user.scroll');
 
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>

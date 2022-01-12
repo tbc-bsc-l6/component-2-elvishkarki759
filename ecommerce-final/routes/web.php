@@ -80,3 +80,14 @@ route::post('/uploadgames',[GameController::class,'uploadgames']);
 
 
 
+// route::get('ping',function(){
+//     $mailchimp = new \mailchimpMarketing\ApiClient();
+//     $mailchimp->setConfig([
+//         'apikey' => config('services.mailchip.key'),
+//         'server' => 'us20'
+//     ]);
+//     $response = $mailchimp->ping->get();
+//     ddd($response);
+// });
+
+// route::post('/subscribe',[HomeController::class,'subscribe']);
