@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CdController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\NewsletterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -82,9 +84,9 @@ route::post('/uploadgames',[GameController::class,'uploadgames']);
 
 
 // route::get('ping',function(){
-//     $mailchimp = new \mailchimpMarketing\ApiClient();
+//     $mailchimp = new \MailchimpMarketing\ApiClient();
 //     $mailchimp->setConfig([
-//         'apikey' => config('services.mailchip.key'),
+//         'apikey' => config('services.mailchimp.key'),
 //         'server' => 'us20'
 //     ]);
 //     $response = $mailchimp->ping->get();
@@ -92,3 +94,9 @@ route::post('/uploadgames',[GameController::class,'uploadgames']);
 // });
 
 // route::post('/subscribe',[HomeController::class,'subscribe']);
+
+
+// Route::get('/newsletter','App\Http\Controllers\NewsletterController@create');
+// Route::post('/newsletter','App\Http\Controllers\NewsletterController@store');
+
+Route::post('/subscribe','App\Http\Controllers\NewsletterController@subscribe')->name('subscribe');
