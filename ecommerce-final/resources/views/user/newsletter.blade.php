@@ -31,7 +31,7 @@
 
                                         
 
-                                        <button type="submit" class="btn btn-danger" style="position:relative;top:10px;left:300px;">Submit</button>
+                                        <button type="submit" class="btn btn-danger" style="position:relative;top:10px;left:300px;">Subscribe</button>
                                     </div>
                                                 </div>
                                         </form>

@@ -57,10 +57,7 @@
                     {{ __('Register') }}
                 </x-jet-button>
             </div>
-        </form>
-        <div>
-    <ul style="position:relative;top:-50px; text-align: left; padding-top:130px">
-        <li>
+            <li style="padding-top:10px;">
             Enter the Name you want to display in the Name field.
         </li>
         <li>
@@ -72,10 +69,12 @@
         <li style="color:red">
             Now You are ready to go.
         </li>
-    </ul>
-</div>
+        </form>
+        
     </x-jet-authentication-card>
 
 </x-guest-layout>
+
+
 
 
